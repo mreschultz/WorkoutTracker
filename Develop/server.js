@@ -22,7 +22,14 @@ mongoose.connect(
        useFindAndModify: false
      }
    );
-
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://EricS:yankeesbaseball@cluster0.tddry.mongodb.net/Workout?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 // routes
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
