@@ -13,15 +13,15 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(
-     process.env.MONGODB_URI || 'mongodb://localhost/Workout',
-     {
-       useNewUrlParser: true,
-       useUnifiedTopology: true,
-       useCreateIndex: true,
-       useFindAndModify: false
-     }
-   );
+// mongoose.connect(
+//      process.env.MONGODB_URI || 'mongodb://localhost/Workout',
+//      {
+//        useNewUrlParser: true,
+//        useUnifiedTopology: true,
+//        useCreateIndex: true,
+//        useFindAndModify: false
+    //  }
+  //  );
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://EricS:yankeesbaseball@cluster0.tddry.mongodb.net/Workout?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
