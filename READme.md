@@ -19,3 +19,7 @@ The user is able to:
   * Add new exercises to a new workout plan.
 
   * View the combined weight of multiple exercises on the `stats` page.
+  
+ ## Deployed on heroku
+ 
+ https://evening-brook-63370.herokuapp.com
